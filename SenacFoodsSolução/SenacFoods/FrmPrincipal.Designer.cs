@@ -28,21 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel2 = new Panel();
             groupBox1 = new GroupBox();
-            button1 = new Button();
-            button2 = new Button();
             button3 = new Button();
             button4 = new Button();
+            button2 = new Button();
+            button1 = new Button();
+            btnFechar = new Button();
+            button5 = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
-            // 
-            // panel2
-            // 
-            panel2.Location = new Point(29, 12);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(735, 66);
-            panel2.TabIndex = 1;
             // 
             // groupBox1
             // 
@@ -51,38 +45,12 @@
             groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(button1);
             groupBox1.ForeColor = SystemColors.ButtonHighlight;
-            groupBox1.Location = new Point(29, 116);
+            groupBox1.Location = new Point(36, 49);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(727, 304);
+            groupBox1.Size = new Size(727, 311);
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             groupBox1.Text = "SenacFoods";
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.Gold;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 16F);
-            button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(30, 73);
-            button1.Name = "button1";
-            button1.Size = new Size(162, 155);
-            button1.TabIndex = 0;
-            button1.Text = "Cardápio";
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.LightSeaGreen;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 16F);
-            button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(366, 73);
-            button2.Name = "button2";
-            button2.Size = new Size(162, 155);
-            button2.TabIndex = 0;
-            button2.Text = "Pedido Cozinha";
-            button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -110,14 +78,63 @@
             button4.Text = "Usuários";
             button4.UseVisualStyleBackColor = false;
             // 
+            // button2
+            // 
+            button2.BackColor = Color.LightSeaGreen;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 16F);
+            button2.ForeColor = SystemColors.ActiveCaptionText;
+            button2.Location = new Point(366, 73);
+            button2.Name = "button2";
+            button2.Size = new Size(162, 155);
+            button2.TabIndex = 0;
+            button2.Text = "Pedido Cozinha";
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Gold;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 16F);
+            button1.ForeColor = SystemColors.ActiveCaptionText;
+            button1.Location = new Point(30, 73);
+            button1.Name = "button1";
+            button1.Size = new Size(162, 155);
+            button1.TabIndex = 0;
+            button1.Text = "Cardápio";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // btnFechar
+            // 
+            btnFechar.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnFechar.Location = new Point(742, 1);
+            btnFechar.Name = "btnFechar";
+            btnFechar.Size = new Size(46, 55);
+            btnFechar.TabIndex = 3;
+            btnFechar.Text = "x";
+            btnFechar.UseVisualStyleBackColor = true;
+            btnFechar.Click += btnFechar_Click;
+            // 
+            // button5
+            // 
+            button5.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button5.Location = new Point(690, 1);
+            button5.Name = "button5";
+            button5.Size = new Size(46, 55);
+            button5.TabIndex = 3;
+            button5.Text = "-";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += btnFechar_Click;
+            // 
             // FrmPrincipal
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(800, 450);
+            Controls.Add(button5);
+            Controls.Add(btnFechar);
             Controls.Add(groupBox1);
-            Controls.Add(panel2);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
@@ -127,12 +144,12 @@
         }
 
         #endregion
-
-        private Panel panel2;
         private GroupBox groupBox1;
         private Button button1;
         private Button button3;
         private Button button4;
         private Button button2;
+        private Button btnFechar;
+        private Button button5;
     }
 }

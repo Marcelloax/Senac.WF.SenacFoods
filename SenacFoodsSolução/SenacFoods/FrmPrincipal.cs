@@ -16,5 +16,15 @@ namespace SenacFoods
         {
             InitializeComponent();
         }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            //Fechar a tela principal
+            Close();
+            //Criar uma instanmcia da tela de login
+            var frmLogin = new FrmLogin();
+            //exibe a tela de login
+            frmLogin.Show();
+        }
     }
 }

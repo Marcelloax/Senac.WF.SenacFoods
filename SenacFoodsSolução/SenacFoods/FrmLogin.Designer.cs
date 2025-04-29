@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            txtSenha = new Panel();
-            txtLogin = new TextBox();
-            textBox1 = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
+            painel1 = new Panel();
             btnEnter = new Button();
-            txtSenha.SuspendLayout();
+            txtSenha = new TextBox();
+            txtLogin = new TextBox();
+            label2 = new Label();
+            label1 = new Label();
+            btnFechar = new Button();
+            painel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -47,19 +48,45 @@
             panel1.Size = new Size(223, 450);
             panel1.TabIndex = 0;
             // 
+            // painel1
+            // 
+            painel1.Controls.Add(btnFechar);
+            painel1.Controls.Add(btnEnter);
+            painel1.Controls.Add(txtSenha);
+            painel1.Controls.Add(txtLogin);
+            painel1.Controls.Add(label2);
+            painel1.Controls.Add(label1);
+            painel1.Dock = DockStyle.Right;
+            painel1.Location = new Point(263, 0);
+            painel1.Name = "painel1";
+            painel1.Size = new Size(537, 450);
+            painel1.TabIndex = 1;
+            // 
+            // btnEnter
+            // 
+            btnEnter.FlatStyle = FlatStyle.Flat;
+            btnEnter.Font = new Font("Microsoft Sans Serif", 16F);
+            btnEnter.ForeColor = SystemColors.ButtonHighlight;
+            btnEnter.Location = new Point(157, 285);
+            btnEnter.Name = "btnEnter";
+            btnEnter.Size = new Size(191, 54);
+            btnEnter.TabIndex = 2;
+            btnEnter.Text = "Enter";
+            btnEnter.UseVisualStyleBackColor = true;
+            btnEnter.Click += btnEnter_Click;
+            // 
             // txtSenha
             // 
-            txtSenha.Controls.Add(btnEnter);
-            txtSenha.Controls.Add(textBox1);
-            txtSenha.Controls.Add(txtLogin);
-            txtSenha.Controls.Add(label2);
-            txtSenha.Controls.Add(label1);
-            txtSenha.Dock = DockStyle.Right;
-            txtSenha.Location = new Point(263, 0);
+            txtSenha.BackColor = SystemColors.InactiveCaptionText;
+            txtSenha.BorderStyle = BorderStyle.None;
+            txtSenha.Cursor = Cursors.SizeAll;
+            txtSenha.Font = new Font("Segoe UI", 16F);
+            txtSenha.ForeColor = SystemColors.InactiveBorder;
+            txtSenha.Location = new Point(94, 184);
             txtSenha.Name = "txtSenha";
-            txtSenha.Size = new Size(537, 450);
-            txtSenha.TabIndex = 1;
-           
+            txtSenha.Size = new Size(341, 43);
+            txtSenha.TabIndex = 0;
+            txtSenha.Text = "Senha";
             // 
             // txtLogin
             // 
@@ -74,30 +101,6 @@
             txtLogin.TabIndex = 0;
             txtLogin.Text = "Usuário";
             // 
-            // textBox1
-            // 
-            textBox1.BackColor = SystemColors.InactiveCaptionText;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Cursor = Cursors.SizeAll;
-            textBox1.Font = new Font("Segoe UI", 16F);
-            textBox1.ForeColor = SystemColors.InactiveBorder;
-            textBox1.Location = new Point(94, 184);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(341, 43);
-            textBox1.TabIndex = 0;
-            textBox1.Text = "Senha";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 16F);
-            label1.Location = new Point(94, 119);
-            label1.Name = "label1";
-            label1.Size = new Size(323, 37);
-            label1.TabIndex = 1;
-            label1.Text = "_________________";
-           
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -108,19 +111,29 @@
             label2.Size = new Size(323, 37);
             label2.TabIndex = 1;
             label2.Text = "_________________";
-            
             // 
-            // btnEnter
+            // label1
             // 
-            btnEnter.FlatStyle = FlatStyle.Flat;
-            btnEnter.Font = new Font("Microsoft Sans Serif", 16F);
-            btnEnter.ForeColor = SystemColors.ButtonHighlight;
-            btnEnter.Location = new Point(157, 285);
-            btnEnter.Name = "btnEnter";
-            btnEnter.Size = new Size(191, 54);
-            btnEnter.TabIndex = 2;
-            btnEnter.Text = "Enter";
-            btnEnter.UseVisualStyleBackColor = true;
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 16F);
+            label1.Location = new Point(94, 119);
+            label1.Name = "label1";
+            label1.Size = new Size(323, 37);
+            label1.TabIndex = 1;
+            label1.Text = "_________________";
+            // 
+            // btnFechar
+            // 
+            btnFechar.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnFechar.ForeColor = SystemColors.ActiveCaptionText;
+            btnFechar.Location = new Point(479, 12);
+            btnFechar.Name = "btnFechar";
+            btnFechar.Size = new Size(46, 55);
+            btnFechar.TabIndex = 4;
+            btnFechar.Text = "x";
+            btnFechar.TextAlign = ContentAlignment.TopCenter;
+            btnFechar.UseVisualStyleBackColor = true;
+            btnFechar.Click += btnFechar_Click;
             // 
             // FrmLogin
             // 
@@ -128,25 +141,26 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(800, 450);
-            Controls.Add(txtSenha);
+            Controls.Add(painel1);
             Controls.Add(panel1);
             ForeColor = SystemColors.ControlLightLight;
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmLogin";
             StartPosition = FormStartPosition.CenterScreen;
-            txtSenha.ResumeLayout(false);
-            txtSenha.PerformLayout();
+            painel1.ResumeLayout(false);
+            painel1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
-        private Panel txtSenha;
+        private Panel painel1;
         private TextBox txtLogin;
-        private TextBox textBox1;
+        private TextBox txtSenha;
         private Label label1;
         private Label label2;
         private Button btnEnter;
+        private Button btnFechar;
     }
 }
