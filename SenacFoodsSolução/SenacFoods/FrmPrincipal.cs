@@ -26,5 +26,10 @@ namespace SenacFoods
             //exibe a tela de login
             frmLogin.Show();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
