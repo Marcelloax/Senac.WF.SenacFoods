@@ -30,24 +30,25 @@
         {
             groupBox1 = new GroupBox();
             button3 = new Button();
-            button4 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            btnUsuario = new Button();
+            btnPedidoCozinha = new Button();
+            btnCardapio = new Button();
             btnFechar = new Button();
-            button5 = new Button();
+            btnMinimizar = new Button();
+            button1 = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(button3);
-            groupBox1.Controls.Add(button4);
-            groupBox1.Controls.Add(button2);
-            groupBox1.Controls.Add(button1);
+            groupBox1.Controls.Add(btnUsuario);
+            groupBox1.Controls.Add(btnPedidoCozinha);
+            groupBox1.Controls.Add(btnCardapio);
             groupBox1.ForeColor = SystemColors.ButtonHighlight;
-            groupBox1.Location = new Point(36, 49);
+            groupBox1.Location = new Point(21, 62);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(727, 311);
+            groupBox1.Size = new Size(757, 273);
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             groupBox1.Text = "SenacFoods";
@@ -65,45 +66,49 @@
             button3.TabIndex = 0;
             button3.Text = "Comanda";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += btnComanda;
             // 
-            // button4
+            // btnUsuario
             // 
-            button4.BackColor = Color.Salmon;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Segoe UI", 16F);
-            button4.ForeColor = SystemColors.ActiveCaptionText;
-            button4.Location = new Point(534, 73);
-            button4.Name = "button4";
-            button4.Size = new Size(162, 155);
-            button4.TabIndex = 0;
-            button4.Text = "Usuários";
-            button4.UseVisualStyleBackColor = false;
+            btnUsuario.BackColor = Color.Salmon;
+            btnUsuario.FlatStyle = FlatStyle.Flat;
+            btnUsuario.Font = new Font("Segoe UI", 16F);
+            btnUsuario.ForeColor = SystemColors.ActiveCaptionText;
+            btnUsuario.Location = new Point(534, 73);
+            btnUsuario.Name = "btnUsuario";
+            btnUsuario.Size = new Size(162, 155);
+            btnUsuario.TabIndex = 0;
+            btnUsuario.Text = "Usuários";
+            btnUsuario.UseVisualStyleBackColor = false;
+            btnUsuario.Click += btnUsuario_Click;
             // 
-            // button2
+            // btnPedidoCozinha
             // 
-            button2.BackColor = Color.LightSeaGreen;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 16F);
-            button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(366, 73);
-            button2.Name = "button2";
-            button2.Size = new Size(162, 155);
-            button2.TabIndex = 0;
-            button2.Text = "Pedido Cozinha";
-            button2.UseVisualStyleBackColor = false;
+            btnPedidoCozinha.BackColor = Color.LightSeaGreen;
+            btnPedidoCozinha.FlatStyle = FlatStyle.Flat;
+            btnPedidoCozinha.Font = new Font("Segoe UI", 16F);
+            btnPedidoCozinha.ForeColor = SystemColors.ActiveCaptionText;
+            btnPedidoCozinha.Location = new Point(366, 73);
+            btnPedidoCozinha.Name = "btnPedidoCozinha";
+            btnPedidoCozinha.Size = new Size(162, 155);
+            btnPedidoCozinha.TabIndex = 0;
+            btnPedidoCozinha.Text = "Pedido Cozinha";
+            btnPedidoCozinha.UseVisualStyleBackColor = false;
+            btnPedidoCozinha.Click += btnPedidoCozinha_Click;
             // 
-            // button1
+            // btnCardapio
             // 
-            button1.BackColor = Color.Gold;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 16F);
-            button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(30, 73);
-            button1.Name = "button1";
-            button1.Size = new Size(162, 155);
-            button1.TabIndex = 0;
-            button1.Text = "Cardápio";
-            button1.UseVisualStyleBackColor = false;
+            btnCardapio.BackColor = Color.Gold;
+            btnCardapio.FlatStyle = FlatStyle.Flat;
+            btnCardapio.Font = new Font("Segoe UI", 16F);
+            btnCardapio.ForeColor = SystemColors.ActiveCaptionText;
+            btnCardapio.Location = new Point(30, 73);
+            btnCardapio.Name = "btnCardapio";
+            btnCardapio.Size = new Size(162, 155);
+            btnCardapio.TabIndex = 0;
+            btnCardapio.Text = "Cardápio";
+            btnCardapio.UseVisualStyleBackColor = false;
+            btnCardapio.Click += button1_Click;
             // 
             // btnFechar
             // 
@@ -116,16 +121,27 @@
             btnFechar.UseVisualStyleBackColor = true;
             btnFechar.Click += btnFechar_Click;
             // 
-            // button5
+            // btnMinimizar
             // 
-            button5.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button5.Location = new Point(690, 1);
-            button5.Name = "button5";
-            button5.Size = new Size(46, 55);
-            button5.TabIndex = 3;
-            button5.Text = "-";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += btnFechar_Click;
+            btnMinimizar.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnMinimizar.Location = new Point(633, 1);
+            btnMinimizar.Name = "btnMinimizar";
+            btnMinimizar.Size = new Size(46, 55);
+            btnMinimizar.TabIndex = 3;
+            btnMinimizar.Text = "-";
+            btnMinimizar.UseVisualStyleBackColor = true;
+            btnMinimizar.Click += btnMinimizar_Click;
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(686, 1);
+            button1.Name = "button1";
+            button1.Size = new Size(46, 55);
+            button1.TabIndex = 3;
+            button1.Text = "[]";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += btnMiximizer_Click;
             // 
             // FrmPrincipal
             // 
@@ -133,7 +149,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(800, 450);
-            Controls.Add(button5);
+            Controls.Add(btnMinimizar);
+            Controls.Add(button1);
             Controls.Add(btnFechar);
             Controls.Add(groupBox1);
             FormBorderStyle = FormBorderStyle.None;
@@ -146,11 +163,12 @@
 
         #endregion
         private GroupBox groupBox1;
-        private Button button1;
+        private Button btnCardapio;
         private Button button3;
-        private Button button4;
-        private Button button2;
+        private Button btnUsuario;
+        private Button btnPedidoCozinha;
         private Button btnFechar;
-        private Button button5;
+        private Button btnMinimizar;
+        private Button button1;
     }
 }

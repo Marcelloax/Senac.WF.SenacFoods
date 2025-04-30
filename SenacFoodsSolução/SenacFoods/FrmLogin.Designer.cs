@@ -30,12 +30,13 @@
         {
             panel1 = new Panel();
             painel1 = new Panel();
+            btnMiximizer = new Button();
+            btnFechar = new Button();
             btnEnter = new Button();
             txtSenha = new TextBox();
             txtLogin = new TextBox();
             label2 = new Label();
             label1 = new Label();
-            btnFechar = new Button();
             painel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -50,6 +51,7 @@
             // 
             // painel1
             // 
+            painel1.Controls.Add(btnMiximizer);
             painel1.Controls.Add(btnFechar);
             painel1.Controls.Add(btnEnter);
             painel1.Controls.Add(txtSenha);
@@ -61,6 +63,32 @@
             painel1.Name = "painel1";
             painel1.Size = new Size(537, 450);
             painel1.TabIndex = 1;
+            // 
+            // btnMiximizer
+            // 
+            btnMiximizer.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnMiximizer.ForeColor = SystemColors.ActiveCaptionText;
+            btnMiximizer.Location = new Point(427, 12);
+            btnMiximizer.Name = "btnMiximizer";
+            btnMiximizer.Size = new Size(46, 55);
+            btnMiximizer.TabIndex = 4;
+            btnMiximizer.Text = "-";
+            btnMiximizer.TextAlign = ContentAlignment.TopCenter;
+            btnMiximizer.UseVisualStyleBackColor = true;
+            btnMiximizer.Click += btnM_Click;
+            // 
+            // btnFechar
+            // 
+            btnFechar.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnFechar.ForeColor = SystemColors.ActiveCaptionText;
+            btnFechar.Location = new Point(479, 12);
+            btnFechar.Name = "btnFechar";
+            btnFechar.Size = new Size(46, 55);
+            btnFechar.TabIndex = 4;
+            btnFechar.Text = "x";
+            btnFechar.TextAlign = ContentAlignment.TopCenter;
+            btnFechar.UseVisualStyleBackColor = true;
+            btnFechar.Click += btnFechar_Click;
             // 
             // btnEnter
             // 
@@ -122,19 +150,6 @@
             label1.TabIndex = 1;
             label1.Text = "_________________";
             // 
-            // btnFechar
-            // 
-            btnFechar.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnFechar.ForeColor = SystemColors.ActiveCaptionText;
-            btnFechar.Location = new Point(479, 12);
-            btnFechar.Name = "btnFechar";
-            btnFechar.Size = new Size(46, 55);
-            btnFechar.TabIndex = 4;
-            btnFechar.Text = "x";
-            btnFechar.TextAlign = ContentAlignment.TopCenter;
-            btnFechar.UseVisualStyleBackColor = true;
-            btnFechar.Click += btnFechar_Click;
-            // 
             // FrmLogin
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -162,5 +177,6 @@
         private Label label2;
         private Button btnEnter;
         private Button btnFechar;
+        private Button btnMiximizer;
     }
 }

@@ -25,5 +25,12 @@ namespace SenacFoods
             Application.Exit();
 
         }
+
+
+        private void btnM_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+
+        }
     }
 }
