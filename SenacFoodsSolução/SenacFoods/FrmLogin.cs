@@ -13,7 +13,7 @@ namespace SenacFoods
         {
             this.Hide();
             //criar uma instancia de FrmPrincipal
-            var frmPrincipal = new FrmPrincipal();
+            var frmPrincipal = new FrmPrincipal(txtLogin.Text,txtSenha.Text);
             //Exibe a tela principal
             frmPrincipal.Show();
         }

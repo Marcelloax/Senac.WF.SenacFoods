@@ -12,7 +12,7 @@ namespace SenacFoods
 {
     public partial class FrmPrincipal : Form
     {
-        public FrmPrincipal()
+        public FrmPrincipal(string nome, string senha)
         {
             InitializeComponent();
         }
@@ -72,9 +72,14 @@ namespace SenacFoods
         }
 
         private void btnMiximizer_Click(object sender, EventArgs e)
-        { 
-                WindowState = FormWindowState.Minimized;
-            }
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
+}
 
