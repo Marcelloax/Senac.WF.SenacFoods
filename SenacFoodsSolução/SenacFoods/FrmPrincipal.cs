@@ -15,6 +15,8 @@ namespace SenacFoods
         public FrmPrincipal(string nome, string senha)
         {
             InitializeComponent();
+            //Exibe o nome do usuario na tela
+            lblMesnagem.Text = "Bem Vindo " + nome;
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
