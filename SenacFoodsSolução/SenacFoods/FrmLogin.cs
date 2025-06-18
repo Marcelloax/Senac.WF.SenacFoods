@@ -11,8 +11,9 @@ namespace SenacFoods
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
+            // Verifica se o login e senha são válidos
             bool loginValido = ValidateLogin(txtLogin.Text, txtSenha.Text);
-
+            
             if(loginValido){
                 this.Hide();
                 //criar uma instancia de FrmPrincipal
@@ -23,14 +24,26 @@ namespace SenacFoods
 
         private bool ValidateLogin(string nome, string senha)
         {
-           if (nome == "admin" && senha == "123")
+            bool usuarioValido = false;
+            using (var banco = new ComandaDBContext())
             {
-                return true;
-            }
-            else
-            {
-                MessageBox.Show("Login ou senha inválidos");
-                return false;
+                // Verifica se o usuário existe no banco de dados
+                var usuario = banco
+                    .Usuarios
+                    .FirstOrDefault(u => u.Nome == nome && u.Senha == senha);
+                if (usuario != null)
+                {
+                    usuarioValido = true;
+                }
+                if (usuarioValido)
+                {
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Login ou senha inválidos");
+                    return false;
+                }
             }
         }
 
