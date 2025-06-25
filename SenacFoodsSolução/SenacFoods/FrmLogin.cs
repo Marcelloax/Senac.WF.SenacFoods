@@ -13,14 +13,16 @@ namespace SenacFoods
         {
             // Verifica se o login e senha são válidos
             bool loginValido = ValidateLogin(txtLogin.Text, txtSenha.Text);
-            
-            if(loginValido){
+
+            if (loginValido)
+            {
                 this.Hide();
                 //criar uma instancia de FrmPrincipal
                 var frmPrincipal = new FrmPrincipal(txtLogin.Text, txtSenha.Text);
                 //Exibe a tela principal
                 frmPrincipal.Show();
-            } }
+            }
+        }
 
         private bool ValidateLogin(string nome, string senha)
         {
@@ -30,8 +32,8 @@ namespace SenacFoods
                 // Verifica se o usuário existe no banco de dados
                 var usuario = banco
                     .Usuarios
-                    .FirstOrDefault(u => u.Nome == nome && u.Senha == senha);
-                if (usuario != null)
+                    .FirstOrDefault(u => u.Email.ToLower() == nome.ToLower() && u.Senha == senha);
+                if (usuario is not null)
                 {
                     usuarioValido = true;
                 }
@@ -66,5 +68,6 @@ namespace SenacFoods
         {
 
         }
+
     }
 }

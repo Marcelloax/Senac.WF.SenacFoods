@@ -115,6 +115,7 @@
             txtSenha.Size = new Size(341, 43);
             txtSenha.TabIndex = 0;
             txtSenha.Text = "Senha";
+            
             // 
             // txtLogin
             // 

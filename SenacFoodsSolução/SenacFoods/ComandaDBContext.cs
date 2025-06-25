@@ -14,5 +14,12 @@ namespace SenacFoods
         public DbSet<Mesa> Mesas { get; set; }
         public DbSet<Comanda> Comandas { get; set; }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            var conexao = "server=localhost;database=senacfoods;user=root;password=";
+            optionsBuilder.UseMySql(conexao,ServerVersion.AutoDetect(conexao) );
+
+            base.OnConfiguring(optionsBuilder);
+        }
     }
 }
