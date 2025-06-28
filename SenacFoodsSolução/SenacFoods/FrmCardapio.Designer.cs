@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            button3 = new Button();
             button2 = new Button();
             button1 = new Button();
             dataGridView1 = new DataGridView();
             label1 = new Label();
             textBox1 = new TextBox();
             btnFechar = new Button();
-            button3 = new Button();
             panel1 = new Panel();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -58,6 +58,18 @@
             groupBox1.Text = "Cardápio";
             groupBox1.Enter += groupBox1_Enter;
             // 
+            // button3
+            // 
+            button3.BackColor = Color.MediumTurquoise;
+            button3.Location = new Point(126, 9);
+            button3.Margin = new Padding(4);
+            button3.Name = "button3";
+            button3.Size = new Size(146, 44);
+            button3.TabIndex = 6;
+            button3.Text = "+ Item";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
             // button2
             // 
             button2.BackColor = Color.PaleGreen;
@@ -68,6 +80,7 @@
             button2.TabIndex = 2;
             button2.Text = "Editar";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -123,18 +136,6 @@
             btnFechar.Text = "x";
             btnFechar.TextAlign = ContentAlignment.TopCenter;
             btnFechar.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.MediumTurquoise;
-            button3.Location = new Point(126, 9);
-            button3.Margin = new Padding(4);
-            button3.Name = "button3";
-            button3.Size = new Size(146, 44);
-            button3.TabIndex = 6;
-            button3.Text = "+ Item";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
             // 
             // panel1
             // 
