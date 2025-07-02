@@ -82,6 +82,11 @@ namespace SenacFoods
         {
 
         }
+
+        private void lblMesnagem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            button3 = new Button();
+            btnadicionar = new Button();
             button2 = new Button();
             button1 = new Button();
             dataGridView1 = new DataGridView();
             label1 = new Label();
-            textBox1 = new TextBox();
+            txtPesquisa = new TextBox();
             btnFechar = new Button();
             panel1 = new Panel();
             groupBox1.SuspendLayout();
@@ -44,7 +44,7 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(button3);
+            groupBox1.Controls.Add(btnadicionar);
             groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(dataGridView1);
@@ -58,17 +58,17 @@
             groupBox1.Text = "Cardápio";
             groupBox1.Enter += groupBox1_Enter;
             // 
-            // button3
+            // btnadicionar
             // 
-            button3.BackColor = Color.MediumTurquoise;
-            button3.Location = new Point(126, 9);
-            button3.Margin = new Padding(4);
-            button3.Name = "button3";
-            button3.Size = new Size(146, 44);
-            button3.TabIndex = 6;
-            button3.Text = "+ Item";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            btnadicionar.BackColor = Color.MediumTurquoise;
+            btnadicionar.Location = new Point(126, 9);
+            btnadicionar.Margin = new Padding(4);
+            btnadicionar.Name = "btnadicionar";
+            btnadicionar.Size = new Size(146, 44);
+            btnadicionar.TabIndex = 6;
+            btnadicionar.Text = "+ Item";
+            btnadicionar.UseVisualStyleBackColor = false;
+            btnadicionar.Click += btnadicionar_Click_1;
             // 
             // button2
             // 
@@ -116,14 +116,14 @@
             label1.Text = "Pesquisar:";
             label1.Click += label1_Click;
             // 
-            // textBox1
+            // txtPesquisa
             // 
-            textBox1.Location = new Point(175, 29);
-            textBox1.Margin = new Padding(4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(603, 39);
-            textBox1.TabIndex = 2;
-            textBox1.TextChanged += textBox1_TextChanged;
+            txtPesquisa.Location = new Point(175, 29);
+            txtPesquisa.Margin = new Padding(4);
+            txtPesquisa.Name = "txtPesquisa";
+            txtPesquisa.Size = new Size(603, 39);
+            txtPesquisa.TabIndex = 2;
+            txtPesquisa.TextChanged += this.txtPesquisa_TextChanged;
             // 
             // btnFechar
             // 
@@ -136,11 +136,12 @@
             btnFechar.Text = "x";
             btnFechar.TextAlign = ContentAlignment.TopCenter;
             btnFechar.UseVisualStyleBackColor = true;
+            btnFechar.Click += btnFechar_Click;
             // 
             // panel1
             // 
             panel1.BackColor = Color.MediumSeaGreen;
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(txtPesquisa);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(68, 6);
             panel1.Name = "panel1";
@@ -175,9 +176,10 @@
         private Button button1;
         private DataGridView dataGridView1;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox txtPesquisa;
         private Button btnFechar;
-        private Button button3;
+        private Button btnadicionar;
         private Panel panel1;
+       
     }
 }

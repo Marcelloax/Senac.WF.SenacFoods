@@ -149,11 +149,12 @@
             lblMesnagem.AutoSize = true;
             lblMesnagem.Font = new Font("Segoe UI", 16F);
             lblMesnagem.ForeColor = SystemColors.ButtonFace;
-            lblMesnagem.Location = new Point(287, 14);
+            lblMesnagem.Location = new Point(86, 14);
             lblMesnagem.Name = "lblMesnagem";
             lblMesnagem.Size = new Size(213, 45);
             lblMesnagem.TabIndex = 4;
             lblMesnagem.Text = "lblMesnagem";
+            lblMesnagem.Click += lblMesnagem_Click;
             // 
             // FrmPrincipal
             // 
@@ -163,8 +164,8 @@
             ClientSize = new Size(800, 450);
             Controls.Add(lblMesnagem);
             Controls.Add(btnMinimizar);
-            Controls.Add(button1);
             Controls.Add(btnFechar);
+            Controls.Add(button1);
             Controls.Add(groupBox1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmPrincipal";
