@@ -37,11 +37,13 @@
             btnMinimizar = new Button();
             button1 = new Button();
             lblMesnagem = new Label();
+            btnMesa = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btnMesa);
             groupBox1.Controls.Add(button3);
             groupBox1.Controls.Add(btnUsuario);
             groupBox1.Controls.Add(btnPedidoCozinha);
@@ -156,6 +158,20 @@
             lblMesnagem.Text = "lblMesnagem";
             lblMesnagem.Click += lblMesnagem_Click;
             // 
+            // btnMesa
+            // 
+            btnMesa.BackColor = Color.MediumPurple;
+            btnMesa.FlatStyle = FlatStyle.Flat;
+            btnMesa.Font = new Font("Segoe UI", 16F);
+            btnMesa.ForeColor = SystemColors.ActiveCaptionText;
+            btnMesa.Location = new Point(277, 19);
+            btnMesa.Name = "btnMesa";
+            btnMesa.Size = new Size(162, 48);
+            btnMesa.TabIndex = 1;
+            btnMesa.Text = "N MESA";
+            btnMesa.UseVisualStyleBackColor = false;
+            btnMesa.Click += button2_Click;
+            // 
             // FrmPrincipal
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -186,5 +202,6 @@
         private Button btnMinimizar;
         private Button button1;
         private Label lblMesnagem;
+        private Button btnMesa;
     }
 }
