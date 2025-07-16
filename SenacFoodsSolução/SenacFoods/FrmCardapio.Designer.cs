@@ -103,6 +103,7 @@
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(850, 314);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // label1
@@ -123,7 +124,7 @@
             txtPesquisa.Name = "txtPesquisa";
             txtPesquisa.Size = new Size(603, 39);
             txtPesquisa.TabIndex = 2;
-            txtPesquisa.TextChanged += this.txtPesquisa_TextChanged;
+            txtPesquisa.TextChanged += txtPesquisa_TextChanged;
             // 
             // btnFechar
             // 

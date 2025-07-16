@@ -12,6 +12,7 @@ namespace SenacFoods
 {
     public partial class FrmCardapio : Form
     {
+        Cardapioitem? cdpselec;
         public FrmCardapio()
         {
             InitializeComponent();
@@ -19,7 +20,17 @@ namespace SenacFoods
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if (cdpselec != null)
+            {
+                using (var bd = new ComandaDBContext())
+                {
+                    bd.CardapioItems.Remove(cdpselec);
+                    bd.SaveChanges();
+                }
+                MessageBox.Show("Cardápio excluido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                BuscarCardapio();
+                cdpselec = null;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -61,7 +72,13 @@ namespace SenacFoods
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            if (cdpselec != null)
+            {
+                var cdpcad = new FrmCardapioCad(cdpselec);
+                cdpcad.Show();
+                BuscarCardapio();
+                cdpselec = null;
+            }
         }
 
         private void btnadicionar_Click_1(object sender, EventArgs e)
@@ -79,6 +96,34 @@ namespace SenacFoods
         {
             // chamar metodo buscar cardapio
             BuscarCardapio();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                cdpselec = dataGridView1.Rows[e.RowIndex].DataBoundItem as Cardapioitem;
+                button2.Enabled = true;
+            }
+
+
+        }
+
+
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (cdpselec != null)
+            {
+                using (var bd = new ComandaDBContext())
+                {
+                    bd.CardapioItems.Remove(cdpselec);
+                    bd.SaveChanges();
+                }
+                MessageBox.Show("Cardápio excluido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                BuscarCardapio();
+                cdpselec = null;
+            }
         }
     }
 }

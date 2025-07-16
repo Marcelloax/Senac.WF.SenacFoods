@@ -64,6 +64,8 @@
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(709, 266);
             dataGridView1.TabIndex = 10;
+            dataGridView1.CellClick += dataGridView1_CellClick;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // button2
             // 
@@ -75,6 +77,7 @@
             button2.TabIndex = 9;
             button2.Text = "Atualizar";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click_1;
             // 
             // button1
             // 
@@ -86,6 +89,7 @@
             button1.TabIndex = 8;
             button1.Text = "Excluir";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // btnadicionar
             // 
@@ -169,7 +173,7 @@
         private Button btnadicionar;
         private Button button1;
         private Button button2;
-        private DataGridView dataGridView1;
         private Button btnFechar;
+        private DataGridView dataGridView1;
     }
 }

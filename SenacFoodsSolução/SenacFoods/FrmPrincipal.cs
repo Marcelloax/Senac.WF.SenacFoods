@@ -19,6 +19,10 @@ namespace SenacFoods
             lblMesnagem.Text = "Bem Vindo " + nome;
         }
 
+        public FrmPrincipal()
+        {
+        }
+
         private void btnFechar_Click(object sender, EventArgs e)
         {
             //Fechar a tela principal
