@@ -159,6 +159,7 @@
             txtTitulo.Name = "txtTitulo";
             txtTitulo.Size = new Size(336, 34);
             txtTitulo.TabIndex = 12;
+            txtTitulo.TextChanged += txtTitulo_TextChanged;
             // 
             // txtDescricao
             // 
