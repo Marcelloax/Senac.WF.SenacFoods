@@ -70,6 +70,7 @@
             btnFechar.Text = "x";
             btnFechar.TextAlign = ContentAlignment.TopCenter;
             btnFechar.UseVisualStyleBackColor = true;
+            btnFechar.Click += btnFechar_Click;
             // 
             // label1
             // 
@@ -108,7 +109,7 @@
             // chkAtivo
             // 
             chkAtivo.FormattingEnabled = true;
-            chkAtivo.Items.AddRange(new object[] { "admin" });
+            chkAtivo.Items.AddRange(new object[] { "admin", "operador" });
             chkAtivo.Location = new Point(35, 415);
             chkAtivo.Name = "chkAtivo";
             chkAtivo.Size = new Size(248, 33);

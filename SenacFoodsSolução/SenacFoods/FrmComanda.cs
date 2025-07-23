@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace SenacFoods
 {
-    public partial class FrmComanda : UserControl
+    public partial class FrmComanda : Form
     {
         public FrmComanda()
         {
             InitializeComponent();
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnadicionar_Click(object sender, EventArgs e)
+        {
+            new FrmComandaCad().ShowDialog();
         }
     }
 }

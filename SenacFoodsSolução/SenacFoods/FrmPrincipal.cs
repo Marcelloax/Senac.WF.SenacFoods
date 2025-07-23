@@ -56,9 +56,9 @@ namespace SenacFoods
         private void btnComanda(object sender, EventArgs e)
         {
             //criar uma instancia de FrmCardapio
-            var frmusuario = new FrmUsuario();
+            var frmcomanda = new FrmComanda();
             //exibe a tela de cardapio em estilo modal()
-            frmusuario.ShowDialog();
+            frmcomanda.ShowDialog();
         }
 
         private void btnPedidoCozinha_Click(object sender, EventArgs e)

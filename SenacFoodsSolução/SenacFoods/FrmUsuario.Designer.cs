@@ -72,6 +72,7 @@
             btnFechar.Text = "x";
             btnFechar.TextAlign = ContentAlignment.TopCenter;
             btnFechar.UseVisualStyleBackColor = true;
+            btnFechar.Click += btnFechar_Click;
             // 
             // label1
             // 

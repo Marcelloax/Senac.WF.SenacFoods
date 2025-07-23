@@ -49,8 +49,8 @@ namespace SenacFoods
                 {
                     Nome = txtNome.Text,
                     Email = txtEmail.Text,
-                    Senha = txtSenha.Text,
-                    Ativo = chkAtivo.Text == "Administrador" ? true : false
+                    Senha = txtSenha.Text,                   
+                    Perfil = chkAtivo.Text
 
                 };
                 bd.Usuarios.Add(usuario);
@@ -76,6 +76,11 @@ namespace SenacFoods
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            if(txtSenha.Text != txtConfirmarSenha.Text)
+            {
+                MessageBox.Show("As senhas não conferem. Por favor, verifique e tente novamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (_Usuario == null)
             {
                 InserirUsuario();
@@ -89,6 +94,11 @@ namespace SenacFoods
         private void chkAtivo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
