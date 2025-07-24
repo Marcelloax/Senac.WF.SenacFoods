@@ -60,6 +60,7 @@
             txtPesquisa.Name = "txtPesquisa";
             txtPesquisa.Size = new Size(747, 31);
             txtPesquisa.TabIndex = 2;
+            txtPesquisa.TextChanged += txtPesquisa_TextChanged;
             // 
             // btnFechar
             // 

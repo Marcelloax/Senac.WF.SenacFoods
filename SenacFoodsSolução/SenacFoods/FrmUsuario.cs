@@ -95,5 +95,10 @@ namespace SenacFoods
         {
             Close();
         }
+
+        private void txtPesquisa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
