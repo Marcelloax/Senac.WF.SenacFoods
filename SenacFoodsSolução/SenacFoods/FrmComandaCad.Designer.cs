@@ -31,12 +31,12 @@
             groupBox1 = new GroupBox();
             textBox1 = new TextBox();
             label2 = new Label();
+            comboBox2 = new ComboBox();
             label1 = new Label();
-            chkAtivo = new ComboBox();
+            cbxCardapio = new ComboBox();
             groupBox2 = new GroupBox();
             button1 = new Button();
             label4 = new Label();
-            comboBox2 = new ComboBox();
             dataGridView1 = new DataGridView();
             button2 = new Button();
             btnSalvar = new Button();
@@ -75,6 +75,16 @@
             label2.TabIndex = 23;
             label2.Text = "Mesa:";
             // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "admin", "operador" });
+            comboBox2.Location = new Point(185, 110);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(261, 33);
+            comboBox2.TabIndex = 21;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -84,21 +94,21 @@
             label1.TabIndex = 22;
             label1.Text = "Nome do Cliente:";
             // 
-            // chkAtivo
+            // cbxCardapio
             // 
-            chkAtivo.FormattingEnabled = true;
-            chkAtivo.Items.AddRange(new object[] { "1", "2", "3" });
-            chkAtivo.Location = new Point(98, 30);
-            chkAtivo.Name = "chkAtivo";
-            chkAtivo.Size = new Size(261, 33);
-            chkAtivo.TabIndex = 20;
-            chkAtivo.SelectedIndexChanged += chkAtivo_SelectedIndexChanged;
+            cbxCardapio.FormattingEnabled = true;
+            cbxCardapio.Items.AddRange(new object[] { "1", "2", "3" });
+            cbxCardapio.Location = new Point(98, 30);
+            cbxCardapio.Name = "cbxCardapio";
+            cbxCardapio.Size = new Size(261, 33);
+            cbxCardapio.TabIndex = 20;
+            cbxCardapio.SelectedIndexChanged += chkAtivo_SelectedIndexChanged;
             // 
             // groupBox2
             // 
             groupBox2.Controls.Add(button1);
             groupBox2.Controls.Add(label4);
-            groupBox2.Controls.Add(chkAtivo);
+            groupBox2.Controls.Add(cbxCardapio);
             groupBox2.Location = new Point(76, 237);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(480, 82);
@@ -127,16 +137,6 @@
             label4.Size = new Size(52, 25);
             label4.TabIndex = 22;
             label4.Text = "Item:";
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "admin", "operador" });
-            comboBox2.Location = new Point(185, 110);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(261, 33);
-            comboBox2.TabIndex = 21;
-            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // dataGridView1
             // 
@@ -181,6 +181,7 @@
             btnFechar.Text = "x";
             btnFechar.TextAlign = ContentAlignment.TopCenter;
             btnFechar.UseVisualStyleBackColor = true;
+            btnFechar.Click += btnFechar_Click;
             // 
             // FrmComandaCad
             // 
@@ -207,7 +208,7 @@
         #endregion
 
         private GroupBox groupBox1;
-        private ComboBox chkAtivo;
+        private ComboBox cbxCardapio;
         private Label label2;
         private Label label1;
         private GroupBox groupBox2;

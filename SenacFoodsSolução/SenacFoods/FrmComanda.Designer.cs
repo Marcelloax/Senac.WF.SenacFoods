@@ -82,7 +82,7 @@
             groupBox1.Margin = new Padding(4);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(4);
-            groupBox1.Size = new Size(1178, 518);
+            groupBox1.Size = new Size(1150, 475);
             groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
             groupBox1.Text = "Comanda";
@@ -90,7 +90,7 @@
             // button3
             // 
             button3.BackColor = Color.DeepSkyBlue;
-            button3.Location = new Point(600, 447);
+            button3.Location = new Point(591, 423);
             button3.Margin = new Padding(4);
             button3.Name = "button3";
             button3.Size = new Size(146, 44);
@@ -101,7 +101,7 @@
             // button2
             // 
             button2.BackColor = Color.PaleGreen;
-            button2.Location = new Point(410, 447);
+            button2.Location = new Point(413, 423);
             button2.Margin = new Padding(4);
             button2.Name = "button2";
             button2.Size = new Size(146, 44);
@@ -112,7 +112,7 @@
             // button1
             // 
             button1.BackColor = Color.IndianRed;
-            button1.Location = new Point(777, 447);
+            button1.Location = new Point(775, 423);
             button1.Margin = new Padding(4);
             button1.Name = "button1";
             button1.Size = new Size(146, 44);
@@ -127,7 +127,7 @@
             dataGridView1.Margin = new Padding(4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(1131, 396);
+            dataGridView1.Size = new Size(1108, 374);
             dataGridView1.TabIndex = 0;
             // 
             // btnadicionar

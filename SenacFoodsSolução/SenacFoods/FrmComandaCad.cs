@@ -12,6 +12,7 @@ namespace SenacFoods
 {
     public partial class FrmComandaCad : Form
     {
+        List<Cardapioitem> itens = new List<Cardapioitem>();
         public FrmComandaCad()
         {
             InitializeComponent();
@@ -23,9 +24,9 @@ namespace SenacFoods
             using (var BancoDados = new ComandaDBContext())
             {
                 var item = BancoDados.CardapioItems.AsQueryable();
-                chkAtivo.DataSource = item.ToList();
-                chkAtivo.DisplayMember = "Titulo";
-                chkAtivo.ValueMember = "Id";
+                cbxCardapio.DataSource = item.ToList();
+                cbxCardapio.DisplayMember = "Titulo";
+                cbxCardapio.ValueMember = "Id";
             }
 
         }
@@ -48,9 +49,19 @@ namespace SenacFoods
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = null;
+            
+            var cardapio = cbxCardapio.SelectedItem as Cardapioitem;
+            if (cardapio == null)
+            {
+                MessageBox.Show("Selecione um item do cardápio.");
+                return;
+            }
 
+            itens.Add(cardapio);
+
+            dataGridView1.DataSource = itens;
         }
-
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -58,7 +69,12 @@ namespace SenacFoods
 
         private void chkAtivo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
